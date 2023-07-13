@@ -119,10 +119,23 @@ const workExperiences = {
   display: true,
   experience: [
     {
+      role: "Full Stack Developer",
+      company: "Upwork · Freelance",
+      companylogo: require("./assets/images/upWorkLogo.jpg"),
+      date: "May 2023 – Present",
+      descBullets: [
+        "Developing and maintaining a platform for users to plan and book photo shoots",
+        "Working on both the front-end and back-end of the website, using React and Node.js",
+        "Implementing a variety of features, including user registration, photo uploading, and booking scheduling",
+        "Optimizing the website for performance and scalability",
+        "Resolving bugs and security vulnerabilities"
+      ]
+    },
+    {
       role: "Frontend / React Developer",
       company: "Smart Corner",
       companylogo: require("./assets/images/smartCornerLogo.png"),
-      date: "May 2022 – Present",
+      date: "May 2022 – April 2023",
       descBullets: [
         "Working on project for creating interactive videos",
         "Developing and implementing highly responsive user interface components using React JS concepts",
