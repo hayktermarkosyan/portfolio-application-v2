@@ -15,7 +15,7 @@ const greeting = {
   username: "Hayk",
   title: "Hi, I'm Hayk",
   subTitle: emoji(
-    "Frontend Software Developer 🚀 having an experience of building Web applications with JavaScript / Reactjs / Nodejs and some other cool libraries and frameworks."
+    "Frontend Developer 🚀 with 5+ years building data-rich dashboards and interactive UIs in React and TypeScript. Full-stack experience with Node.js and NestJS, and a deep practitioner of AI-assisted development."
   ),
   resumeLink: require("./assets/resume/resume.pdf"),
   displayGreeting: true
@@ -31,15 +31,48 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "FRONTEND DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle:
+    "FRONTEND DEVELOPER BUILDING RESPONSIVE, ACCESSIBLE WEB EXPERIENCES WITH AI-ASSISTED WORKFLOWS",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Frontend / User Interfaces for your web and mobile applications"
+      "⚡ Build data-rich dashboards and interactive UIs with React, React Native, Next.js, and TypeScript"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji("⚡ Integration of third party services such as Firebase")
+    emoji(
+      "⚡ Deliver full-stack features with Node.js and NestJS, including REST/GraphQL APIs and PostgreSQL/MongoDB"
+    ),
+    emoji(
+      "⚡ Supercharge engineering workflows with AI tools — Claude Code, MCP servers, custom slash commands, subagents, and skills"
+    )
   ],
   softwareSkills: [
+    {
+      skillName: "JavaScript",
+      fontAwesomeClassname: "fab fa-js"
+    },
+    {
+      skillName: "TypeScript",
+      fontAwesomeClassname: "fas fa-code"
+    },
+    {
+      skillName: "reactjs",
+      fontAwesomeClassname: "fab fa-react"
+    },
+    {
+      skillName: "React Native",
+      fontAwesomeClassname: "fab fa-react"
+    },
+    {
+      skillName: "nextjs",
+      fontAwesomeClassname: "fas fa-n"
+    },
+    {
+      skillName: "nodejs",
+      fontAwesomeClassname: "fab fa-node"
+    },
+    {
+      skillName: "NestJS",
+      fontAwesomeClassname: "fas fa-server"
+    },
     {
       skillName: "html-5",
       fontAwesomeClassname: "fab fa-html5"
@@ -49,36 +82,40 @@ const skillsSection = {
       fontAwesomeClassname: "fab fa-css3-alt"
     },
     {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
-      skillName: "bootstrap",
-      fontAwesomeClassname: "fab fa-bootstrap"
-    },
-    {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
-    },
-    {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
+      skillName: "Tailwind CSS",
+      fontAwesomeClassname: "fas fa-wind"
     },
     {
       skillName: "sql-database",
       fontAwesomeClassname: "fas fa-database"
     },
     {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
+      skillName: "MongoDB",
+      fontAwesomeClassname: "fas fa-leaf"
+    },
+    {
+      skillName: "AWS",
+      fontAwesomeClassname: "fab fa-aws"
+    },
+    {
+      skillName: "docker",
+      fontAwesomeClassname: "fab fa-docker"
+    },
+    {
+      skillName: "git",
+      fontAwesomeClassname: "fab fa-git-alt"
+    },
+    {
+      skillName: "GitHub Actions",
+      fontAwesomeClassname: "fab fa-github"
+    },
+    {
+      skillName: "npm",
+      fontAwesomeClassname: "fab fa-npm"
+    },
+    {
+      skillName: "AI / Claude",
+      fontAwesomeClassname: "fas fa-robot"
     }
   ],
   display: true
@@ -88,10 +125,10 @@ const educationInfo = {
   display: true,
   schools: [
     {
-      schoolName: "Military Engineering University, Cherepovets, Russia",
+      schoolName: "Military University of Radio Electronics",
       logo: require("./assets/images/cherepovetsLogo.png"),
-      subHeader: "BS, Engineering Technology (Radio Engineering) ",
-      duration: "September 2010 - June 2015"
+      subHeader: "Bachelor's Degree in Engineering",
+      duration: "January 2010 - January 2015"
     }
   ]
 };
@@ -100,16 +137,20 @@ const techStack = {
   viewSkillBars: true,
   experience: [
     {
-      Stack: "Frontend/Design",
+      Stack: "Frontend (React, TypeScript, Next.js)",
+      progressPercentage: "90%"
+    },
+    {
+      Stack: "Mobile (React Native)",
+      progressPercentage: "80%"
+    },
+    {
+      Stack: "Backend (Node.js, NestJS)",
       progressPercentage: "70%"
     },
     {
-      Stack: "Backend",
-      progressPercentage: "30%"
-    },
-    {
-      Stack: "Programming",
-      progressPercentage: "70%"
+      Stack: "AI-Assisted Development",
+      progressPercentage: "85%"
     }
   ],
   displayCodersrank: false
@@ -119,39 +160,63 @@ const workExperiences = {
   display: true,
   experience: [
     {
-      role: "Full Stack Developer",
+      role: "Freelance Full Stack Developer",
       company: "Upwork · Freelance",
       companylogo: require("./assets/images/upWorkLogo.jpg"),
       date: "May 2023 – Present",
       descBullets: [
         "Developing and maintaining a platform for users to plan and book photo shoots",
-        "Working on both the front-end and back-end of the website, using React and Node.js",
-        "Implementing a variety of features, including user registration, photo uploading, and booking scheduling",
-        "Optimizing the website for performance and scalability",
-        "Resolving bugs and security vulnerabilities"
+        "Working across the full stack using React and Node.js",
+        "Implementing features including user registration, photo uploading, and booking scheduling",
+        "Optimizing the platform for performance and scalability; resolving bugs and security vulnerabilities"
       ]
     },
     {
-      role: "Frontend / React Developer",
-      company: "Smart Corner",
+      role: "Frontend Developer",
+      company: "Smart Corner Armenia",
       companylogo: require("./assets/images/smartCornerLogo.png"),
       date: "May 2022 – April 2023",
       descBullets: [
-        "Working on project for creating interactive videos",
-        "Developing and implementing highly responsive user interface components using React JS concepts",
-        "Troubleshooting interface software and debugging application codes",
-        "Monitoring and improving front-end performance"
+        "Developed an interactive video application with a responsive UI using React.js",
+        "Built reusable components and optimized rendering performance for a seamless user experience",
+        "Maintained a clean and scalable application architecture while actively debugging and resolving issues"
       ]
     },
     {
-      role: "Military Intelligence Officer / Major",
-      company: "Ministry of Defense of RA",
-      companylogo: require("./assets/images/modLogo.png"),
-      date: "August 2015 – Present",
+      role: "Frontend Developer",
+      company: "Nellie Health",
+      companylogo: require("./assets/images/nellieHealthLogo.jpeg"),
+      bannerColor: "#5119B9",
+      date: "February 2021 – May 2022",
       descBullets: [
-        "Leading a team of eight (engineers and soldiers) to maintain information security, and preserve flawless service provision to the necessary stakeholders",
-        "Use of unique datasets, specialized tools, and network analysis techniques to identify and analyze cyber security threats and mitigate the risks",
-        "Developing and implementing scalable and efficient strategies to ensure consistent results of the radio intelligence department"
+        "Led development of the admin dashboard, overseeing design, architecture, and implementation across front-end and back-end",
+        "Collaborated closely with developers, designers, and stakeholders to align the dashboard with user needs",
+        "Designed and implemented an intuitive, user-friendly interface to enhance the overall user experience",
+        "Built and integrated APIs to connect the dashboard with external systems and data sources",
+        "Developed a scalable and efficient database schema to support dashboard data operations"
+      ]
+    },
+    {
+      role: "Frontend Developer",
+      company: "SoftConstruct",
+      companylogo: require("./assets/images/softConstructLogo.jpeg"),
+      date: "March 2020 – February 2021",
+      descBullets: [
+        "Built and maintained user interfaces of web applications with a focus on performance and usability",
+        "Translated design concepts into responsive and accessible code in close collaboration with UI/UX designers",
+        "Wrote clean, maintainable HTML, CSS, and JavaScript following best practices",
+        "Optimized web applications for speed, scalability, and cross-browser compatibility"
+      ]
+    },
+    {
+      role: "Major",
+      company: "Ministry of Defence of the Republic of Armenia",
+      companylogo: require("./assets/images/modLogo.png"),
+      date: "August 2015 – March 2025",
+      descBullets: [
+        "Led an 8-person team to ensure information security and stable service delivery in mission-critical environments",
+        "Performed cyber threat analysis using advanced datasets and security tools to identify and mitigate risks",
+        "Developed scalable intelligence-gathering systems to support proactive cybersecurity operations"
       ]
     }
   ]
