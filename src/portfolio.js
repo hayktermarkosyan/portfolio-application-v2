@@ -197,18 +197,6 @@ const workExperiences = {
       ]
     },
     {
-      role: "Frontend Developer",
-      company: "SoftConstruct",
-      companylogo: require("./assets/images/softConstructLogo.jpeg"),
-      date: "March 2020 – February 2021",
-      descBullets: [
-        "Built and maintained user interfaces of web applications with a focus on performance and usability",
-        "Translated design concepts into responsive and accessible code in close collaboration with UI/UX designers",
-        "Wrote clean, maintainable HTML, CSS, and JavaScript following best practices",
-        "Optimized web applications for speed, scalability, and cross-browser compatibility"
-      ]
-    },
-    {
       role: "Major",
       company: "Ministry of Defence of the Republic of Armenia",
       companylogo: require("./assets/images/modLogo.png"),
