@@ -15,7 +15,8 @@ const ERR = {
 };
 if (USE_GITHUB_DATA === "true") {
   if (GITHUB_USERNAME === undefined) {
-    throw new Error(ERR.noUserName);
+    console.warn(`${ERR.noUserName} Skipping GitHub profile fetch.`);
+    process.exit(0);
   }
 
   console.log(`Fetching profile data for ${GITHUB_USERNAME}`);
@@ -69,7 +70,11 @@ if (USE_GITHUB_DATA === "true") {
 
     console.log(`statusCode: ${res.statusCode}`);
     if (res.statusCode !== 200) {
-      throw new Error(ERR.requestFailed);
+      console.warn(
+        `${ERR.requestFailed} Skipping GitHub profile fetch so the build can continue.`
+      );
+      res.resume();
+      return;
     }
 
     res.on("data", d => {
@@ -84,7 +89,9 @@ if (USE_GITHUB_DATA === "true") {
   });
 
   req.on("error", error => {
-    throw error;
+    console.warn(
+      `GitHub profile request failed (${error.message}). Skipping fetch so the build can continue.`
+    );
   });
 
   req.write(data);
