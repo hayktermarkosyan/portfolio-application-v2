@@ -2,7 +2,6 @@ import React, {useContext} from "react";
 import "./WorkExperience.scss";
 import ExperienceCard from "../../components/experienceCard/ExperienceCard";
 import {workExperiences} from "../../portfolio";
-import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function WorkExperience() {
@@ -10,31 +9,33 @@ export default function WorkExperience() {
   if (workExperiences.display) {
     return (
       <div id="experience">
-        <Fade bottom duration={1000} distance="20px">
-          <div className="experience-container" id="workExperience">
-            <div>
-              <h1 className="experience-heading">Experiences</h1>
-              <div className="experience-cards-div">
-                {workExperiences.experience.map((card, i) => {
-                  return (
-                    <ExperienceCard
-                      key={i}
-                      isDark={isDark}
-                      cardInfo={{
-                        company: card.company,
-                        date: card.date,
-                        companylogo: card.companylogo,
-                        role: card.role,
-                        descBullets: card.descBullets,
-                        bannerColor: card.bannerColor
-                      }}
-                    />
-                  );
-                })}
-              </div>
+        {/* No single Fade wrapper here: on narrow screens the stacked cards are
+            taller than the viewport and react-reveal's in-view check mis-fires,
+            leaving the whole section invisible (opacity:0) but still reserving
+            its height — a huge blank gap. Cards reveal individually instead. */}
+        <div className="experience-container" id="workExperience">
+          <div>
+            <h1 className="experience-heading">Experiences</h1>
+            <div className="experience-cards-div">
+              {workExperiences.experience.map((card, i) => {
+                return (
+                  <ExperienceCard
+                    key={i}
+                    isDark={isDark}
+                    cardInfo={{
+                      company: card.company,
+                      date: card.date,
+                      companylogo: card.companylogo,
+                      role: card.role,
+                      descBullets: card.descBullets,
+                      bannerColor: card.bannerColor
+                    }}
+                  />
+                );
+              })}
             </div>
           </div>
-        </Fade>
+        </div>
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React, {useState, createRef} from "react";
+import {Fade} from "react-reveal";
 import "./ExperienceCard.scss";
 import ColorThief from "colorthief";
 
@@ -31,11 +32,12 @@ export default function ExperienceCard({cardInfo, isDark}) {
   };
 
   return (
-    <div className={isDark ? "experience-card-dark" : "experience-card"}>
-      <div
-        style={{background: cardInfo.bannerColor || rgb(colorArrays)}}
-        className="experience-banner"
-      >
+    <Fade bottom duration={800} distance="20px">
+      <div className={isDark ? "experience-card-dark" : "experience-card"}>
+        <div
+          style={{background: cardInfo.bannerColor || rgb(colorArrays)}}
+          className="experience-banner"
+        >
         <div className="experience-blurred_div"></div>
         <div className="experience-div-company">
           <h5 className="experience-text-company">{cardInfo.company}</h5>
@@ -69,10 +71,14 @@ export default function ExperienceCard({cardInfo, isDark}) {
         >
           {cardInfo.date}
         </h5>
-        <ul>
-          <GetDescBullets descBullets={cardInfo.descBullets} isDark={isDark} />
-        </ul>
+          <ul>
+            <GetDescBullets
+              descBullets={cardInfo.descBullets}
+              isDark={isDark}
+            />
+          </ul>
+        </div>
       </div>
-    </div>
+    </Fade>
   );
 }
