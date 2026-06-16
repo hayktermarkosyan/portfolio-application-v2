@@ -3,34 +3,39 @@
 .experience-card {
   position: relative;
   background-color: $lightBackground2;
-  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius);
   border: 1px solid $lightBorder1;
+  overflow: hidden;
+  transition: transform var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 
 .experience-card-dark {
   position: relative;
-  background-color: $darkBackground;
-  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  border-radius: 10px;
+  background-color: $darkCardBackground;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius);
   border: 1px solid $lightBorder1;
+  overflow: hidden;
+  transition: transform var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 
-.experience-card:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+.experience-card:hover,
+.experience-card-dark:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
 }
 
 .experience-banner {
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 150%;
+  background-size: cover;
   background: $experienceCardBannerLG;
-  border-radius: 10px 10px 0px 0px;
-  -webkit-filter: blur(0px);
-  -moz-filter: blur(0px);
-  -o-filter: blur(0px);
-  -ms-filter: blur(0px);
-  filter: blur(0px);
+  border-radius: var(--radius) var(--radius) 0px 0px;
   height: 11rem;
   display: flex;
   align-items: flex-end;
@@ -40,16 +45,12 @@
 .experience-blurred_div {
   position: absolute;
   background: $experienceCardBlurredDivLG;
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
+  filter: blur(6px);
   height: 11rem;
   top: 0;
   left: 0;
   width: 100%;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: var(--radius) var(--radius) 0px 0px;
 }
 
 .experience-div-company {
@@ -68,10 +69,11 @@
   text-align: center;
   padding: 1.5rem;
   margin: 0;
-  color: $lightBackground1;
+  color: #ffffff;
   font-size: 25px;
-  text-align: center;
   font-weight: 700;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -87,15 +89,22 @@
   margin-right: auto;
   width: 8rem;
   height: 8rem;
-  box-shadow: 0 0.5rem 1rem $lightBoxShadowDarker;
+  padding: 0.35rem;
+  background: $lightBackground2;
+  box-shadow: 0 0.75rem 1.5rem $lightBoxShadowDarker;
   border-radius: 50%;
+}
+
+.experience-card-dark .experience-roundedimg {
+  background: $darkCardBackground;
 }
 
 .experience-text-role {
   text-align: center;
-  color: $textColor;
+  color: var(--text-strong);
   font-weight: 700;
-  font-size: 25px;
+  font-size: 24px;
+  letter-spacing: -0.01em;
   margin: 0px;
   padding-top: 1.5rem;
   line-height: normal;
@@ -105,15 +114,19 @@
 }
 .experience-text-date {
   text-align: center;
-  color: $textColor;
-  font-size: 20px;
+  color: var(--accent);
+  font-size: 17px;
   margin: 0px;
-  padding-top: 1rem;
+  padding-top: 0.75rem;
   font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .experience-text-desc {
   text-align: center;
+  color: var(--text-muted);
+  line-height: 1.55;
 }
 
 .experience-text-details {
@@ -132,7 +145,7 @@
     font-size: 22px;
   }
   .experience-text-date {
-    font-size: 18px;
+    font-size: 16px;
   }
   .experience-roundedimg {
     width: 6.5rem;
@@ -148,7 +161,7 @@
     font-size: 22px;
   }
   .experience-text-date {
-    font-size: 18px;
+    font-size: 16px;
   }
   .experience-text-desc {
     font-size: 16px;

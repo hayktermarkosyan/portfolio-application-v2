@@ -10,22 +10,20 @@
 
 .icon-button i {
   color: $textColorDark;
-  border-radius: 2.6rem;
+  border-radius: 50%;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   height: 2.6rem;
   line-height: 2.6rem;
-  margin: 0 5px;
+  margin: 0 6px;
   position: relative;
   text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   width: 2.6rem;
   margin-bottom: 10px;
-  transition: 0.2s ease-in;
+  transition: transform var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease), filter var(--dur) var(--ease);
 }
 
 .facebook i {
@@ -49,7 +47,9 @@
 .github i:hover,
 .linkedin i:hover,
 .facebook i:hover {
-  background-color: $textColor;
+  transform: translateY(-4px);
+  filter: brightness(1.1);
+  box-shadow: 0 10px 22px -8px rgba(0, 0, 0, 0.5);
 }
 
 /* Media Query */

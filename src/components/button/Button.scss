@@ -1,28 +1,34 @@
 @import "../../_globalColor";
 
 .main-button {
-  background-color: $buttonColor;
-  border: solid 1px $buttonColor;
-  color: $textColorDark;
-  font-weight: 700;
+  position: relative;
+  background-image: var(--gradient-accent);
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   width: max-content;
-  padding: 13px 22px;
-  margin-right: 50px;
+  padding: 14px 28px;
+  margin-right: 24px;
   text-transform: uppercase;
-  border-radius: 6px;
+  font-size: 0.875rem;
+  border-radius: 12px;
   text-align: center;
   text-decoration: none;
-  display: block;
+  display: inline-block;
   margin-top: 20px;
-  font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease-in-out 0s;
+  box-shadow: 0 10px 24px -10px var(--accent-glow);
+  transition: transform var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease), filter var(--dur) var(--ease);
 }
 .main-button:hover {
-  background-color: $darkBoxShadow2;
-  color: $buttonColor;
-  transition: all 0.3s ease 0s;
   transform: translateY(-3px);
+  box-shadow: 0 18px 34px -10px var(--accent-glow);
+  filter: brightness(1.06);
+}
+.main-button:active {
+  transform: translateY(-1px);
 }
 .project-button {
   display: flex;
@@ -35,8 +41,8 @@
 /* Media Query */
 @media (max-width: 768px) {
   .main-button {
-    font-size: 0.938rem;
-    padding: 12px 18px;
+    font-size: 0.85rem;
+    padding: 12px 22px;
     margin-right: 0px;
   }
 }

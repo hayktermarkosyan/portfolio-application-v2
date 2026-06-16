@@ -15,14 +15,11 @@
 
 .greeting-main {
   display: flex;
+  align-items: center;
 }
 
 .subTitle {
   color: $subTitle !important;
-}
-
-.greeting-main {
-  display: flex;
 }
 
 .greeting-main > * {
@@ -31,18 +28,30 @@
 }
 .button-greeting-div {
   display: flex;
-  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
 }
 
 .greeting-text {
-  font-size: 70px;
-  line-height: 1.1;
-  color: $textColor !important;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  background-image: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: $buttonColor;
+  filter: drop-shadow(0 2px 20px var(--accent-glow));
 }
 
 .greeting-text-p {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 28px;
+  line-height: 1.45;
+  font-weight: 400;
+  max-width: 34ch;
+  color: var(--text-muted);
 }
 
 .greeting-image-div > img {
@@ -85,24 +94,25 @@
 /* Media Query */
 @media (max-width: 1380px) {
   .greeting-text {
-    font-size: 50px;
+    font-size: 54px;
   }
   .greeting-text-p {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 @media (max-width: 768px) {
   .button-greeting-div {
-    justify-content: space-around;
+    justify-content: center;
   }
   .greeting-text {
-    font-size: 30px;
+    font-size: 34px;
     text-align: center;
   }
   .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
+    font-size: 17px;
+    line-height: 1.5;
     text-align: center;
+    max-width: none;
   }
   .greeting-main {
     display: block;

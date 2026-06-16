@@ -15,7 +15,7 @@ const greeting = {
   username: "Hayk",
   title: "Hi, I'm Hayk",
   subTitle: emoji(
-    "Frontend Developer 🚀 with 5+ years building data-rich dashboards and interactive UIs in React and TypeScript. Full-stack experience with Node.js and NestJS, and a deep practitioner of AI-assisted development."
+    "Frontend Developer 🚀 with 5+ years building data-rich dashboards and interactive UIs across web and mobile. Expert in React, React Native, TypeScript, Node.js, and NestJS — architecting reusable component and data-visualization libraries and owning features end to end. Shipped across the full company-stage spectrum, from enterprise SaaS (Totango) to startups built zero-to-launch (HippoCamera), and a deep practitioner of AI-assisted development workflows."
   ),
   resumeLink: require("./assets/resume/resume.pdf"),
   displayGreeting: true
@@ -128,7 +128,7 @@ const educationInfo = {
       schoolName: "Military University of Radio Electronics",
       logo: require("./assets/images/cherepovetsLogo.png"),
       subHeader: "Bachelor's Degree in Engineering",
-      duration: "January 2010 - January 2015"
+      duration: "September 2010 - June 2015"
     }
   ]
 };
@@ -160,15 +160,44 @@ const workExperiences = {
   display: true,
   experience: [
     {
-      role: "Freelance Full Stack Developer",
-      company: "Upwork · Freelance",
-      companylogo: require("./assets/images/upWorkLogo.jpg"),
-      date: "May 2023 – Present",
+      role: "Senior Frontend Developer",
+      company: "Totango",
+      companylogo: require("./assets/images/totangoLogo.jpeg"),
+      bannerColor: "#16302F",
+      date: "May 2023 – March 2026",
       descBullets: [
-        "Developing and maintaining a platform for users to plan and book photo shoots",
-        "Working across the full stack using React and Node.js",
-        "Implementing features including user registration, photo uploading, and booking scheduling",
-        "Optimizing the platform for performance and scalability; resolving bugs and security vulnerabilities"
+        "Built a shared React and Vue.js component layer, extracting duplicated UI into a single versioned internal package so feature teams across three enterprise apps consumed one source of truth instead of re-implementing the same elements",
+        "Designed the API integration layer on TanStack Query with query-key-scoped caching, in-flight request deduplication, and background refetch, cutting redundant API calls by ~40%",
+        "Led the Vuex-to-Pinia migration, converting mutation-based stores to typed Pinia stores with composable getters and actions and removing the global mutation side-effects that were causing cross-module state bugs",
+        "Drove the Catalyst AI-development initiative: defined the repository structure, agent and prompt conventions, and code-review automation that the team standardized on for AI-assisted feature work"
+      ]
+    },
+    {
+      role: "Frontend Developer (Part-time)",
+      company: "Nsoft",
+      companylogo: require("./assets/images/nsoftLogo.png"),
+      bannerColor: "#1A1A1A",
+      date: "May 2023 – January 2025",
+      descBullets: [
+        "Built a data-visualization suite of reusable chart components (line, bar, pie, and combo charts) with a theming layer that maps each brand's color and typography tokens onto the charts at render time",
+        "Instrumented chart hover and drill-down interactions with event tracking so the product team could see which metrics users actually engaged with"
+      ]
+    },
+    {
+      role: "Full Stack Developer (Part-time)",
+      company: "HippoCamera",
+      companylogo: require("./assets/images/hippoCameraLogo.png"),
+      bannerColor: "#0A8278",
+      date: "January 2023 – December 2025",
+      descBullets: [
+        "Architected the end-to-end memory-capture platform — React Native mobile app, Strapi backend, and TanStack Start admin dashboard — owning the data flow from on-device capture through backend processing to the admin review surface",
+        "Built a production-ready React Native app using Expo Router v5 with offline-first architecture, Zustand state management, and sophisticated media recording capabilities",
+        "Implemented video/audio recording, file upload queues with presigned URLs, push notifications, and geolocation services with a 3-agent development workflow",
+        "Hand-built a custom offline-first sync queue (before AI coding tools existed) for memory, replay, and media-upload events — a FIFO action state machine with HATEOAS-style fulfilled/rejected transitions, exponential-backoff retries, per-asset retry tracking, and rate-limited draining",
+        "Wrote 10+ custom facade and adapter modules wrapping Expo and React Native packages (file system, permissions, notifications, image picker, geolocation, network) so legacy, non-Expo-compatible libraries ran in a fully managed Expo workflow",
+        "Developed a custom MCP server wrapping Figma's MCP for intelligent design-to-code conversion, mapping design components to React Native code",
+        "Automated end-to-end mobile UI tests with Maestro and accelerated delivery with MCP-driven tooling — the XcodeBuild MCP for iOS build/automation and the Chrome MCP for browser workflows",
+        "Tech: React Native, Expo, Maestro, TypeScript, Zustand, TanStack Query, Strapi, Node.js, PostgreSQL"
       ]
     },
     {
@@ -189,11 +218,10 @@ const workExperiences = {
       bannerColor: "#5119B9",
       date: "February 2021 – May 2022",
       descBullets: [
-        "Led development of the admin dashboard, overseeing design, architecture, and implementation across front-end and back-end",
-        "Collaborated closely with developers, designers, and stakeholders to align the dashboard with user needs",
-        "Designed and implemented an intuitive, user-friendly interface to enhance the overall user experience",
-        "Built and integrated APIs to connect the dashboard with external systems and data sources",
-        "Developed a scalable and efficient database schema to support dashboard data operations"
+        "Led development of the admin dashboard, overseeing design, architecture, and implementation across both frontend and backend",
+        "Collaborated closely with developers, designers, and stakeholders to gather requirements and align the dashboard with user needs",
+        "Built and integrated APIs to connect the dashboard with external systems and data sources, backed by a scalable database schema",
+        "Continuously monitored, optimized, and enhanced the dashboard based on user feedback and evolving business requirements"
       ]
     },
     {

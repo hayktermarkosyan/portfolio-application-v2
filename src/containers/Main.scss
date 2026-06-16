@@ -1,7 +1,23 @@
-@import "../_globalColor";
+@import "../globalColor";
 
-.dark-mode {
+/* Page background lives on the root only. The bare `.dark-mode` class is reused
+   as a text-color utility on many small elements, so painting a background on
+   it would bleed the page gradient onto headings, cards and text. */
+.app-root.dark-mode {
   background-color: $darkBackground;
-  color: white;
-  transition: "0.1s";
+  background-image: radial-gradient(
+      60rem 60rem at 12% -10%,
+      rgba(99, 102, 241, 0.16),
+      transparent 60%
+    ),
+    radial-gradient(
+      55rem 55rem at 100% 8%,
+      rgba(168, 85, 247, 0.14),
+      transparent 60%
+    );
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: var(--text-strong);
+  transition: background-color var(--dur) var(--ease),
+    color var(--dur) var(--ease);
 }
